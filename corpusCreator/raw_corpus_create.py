@@ -33,17 +33,10 @@ def processFileContent(file_content):
                 if(len(word)>1):
                     print (word)
                     processd_final_content = processd_final_content + word.lower() + ' '
-
-            #pword=" ".join(str(x) for x in processed_word_list)
-            #print (pword)
-            #print (len(pword))
-            #if(len(pword)>2):
-                #print (len(pword))
-                #processd_final_content = processd_final_content + pword.lower() + ' '
     return processd_final_content
 
-corpus='Eclipse'
-topdir = 'E:\PhD\LSI\Repo\\'+corpus+'\Source\EclipseV3.1'
+corpus='SWT'
+topdir = 'E:\PhD\LSI\Repo\\'+corpus+'\Source\swt-3.1'
 exten = '.java'
 pathToWrite = 'E:\PhD\LSI\Repo\\'+corpus+'\processedSourceCodes'
 

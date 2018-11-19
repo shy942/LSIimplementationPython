@@ -23,6 +23,8 @@ class LSA(Transform):
 
 			#Dimension reduction, build SIGMA'
 			for index in xrange(rows - dimensions, rows):
+				print (rows)
+				print (dimensions)
 				sigma[index] = 0
 
 			#Reconstruct MATRIX'

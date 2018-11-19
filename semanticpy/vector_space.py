@@ -21,17 +21,45 @@ class VectorSpace:
     """
 
     collection_of_document_term_vectors = []
+    documents=[]
+    file_path_all=[]
+    document_ID_file_info_mapping=[]
     vector_index_to_keyword_mapping = []
     transformed_matrix=[]
     parser = None
 
     def __init__(self, documents = [], transforms = [TFIDF, LSA]):
     	self.collection_of_document_term_vectors = []
+
         self.transformed_matrix = []
     	self.parser = Parser()
     	if len(documents) > 0:
     		self._build(documents, transforms)
 
+    def __init__(self, documentsdict={}, transforms = [TFIDF, LSA]):
+    	self.collection_of_document_term_vectors = []
+        self.documents = []
+        self.file_path_all=[]
+        self.document_ID_file_info_mapping=[]
+        self.transformed_matrix = []
+    	self.parser = Parser()
+
+        self._addToList(documentsdict)
+    	if len(self.documents) > 0:
+    		self._build(self.documents, transforms)
+
+    def _addToList(self,documents_dict):
+        index=1;
+        for key in documents_dict:
+            self.documents.append(documents_dict[key])
+            self.file_path_all.append(key)
+            #self.document_ID_file_info_mapping[key]=index;
+
+    def get_file_path_all(self):
+        return self.file_path_all
+
+    def get_document_ID_file_info_mapping(self):
+        return  self.document_ID_file_info_mapping
 
     def related(self, document_id):
         """ find documents that are related to the document indexed by passed Id within the document Vectors
@@ -41,6 +69,9 @@ class VectorSpace:
         #pdb.set_trace()
         #ratings.sort(reverse = True)
         return ratings
+
+    def relatedBySVDmatrix(self, document_id):
+        ratings = [self._cosine(self.transformed_matrix[document_id], document_vector) for document_vector in self.transformed_matrix]
 
     def setTransform(self, transforms):
         self.transformed_matrix=transforms
@@ -64,6 +95,8 @@ class VectorSpace:
 
     def _build(self, documents, transforms):
     	""" Create the vector space for the passed document strings """
+        print ('from vector_space class')
+        print(documents)
     	self.vector_index_to_keyword_mapping = self._get_vector_keyword_index(documents)
         #import pdb
         #pdb.set_trace()
@@ -71,7 +104,7 @@ class VectorSpace:
     	matrix = [self._make_vector(document) for document in documents]
         #import pdb
         #pdb.set_trace()
-        matrix = reduce(lambda matrix,transform: transform(matrix).transform(), transforms, matrix)
+        #matrix = reduce(lambda matrix,transform: transform(matrix).transform(), transforms, matrix)
         self.collection_of_document_term_vectors = matrix
 
     def _get_vector_keyword_index(self, document_list):

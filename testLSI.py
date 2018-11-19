@@ -12,7 +12,7 @@ file_content = file_read.readFilesWordByWord(sourcepath, '.java')
 print ("Testing file read")
 print(file_content)
 
-querypath="E:/PhD/Repo/Zxing/BugData/357-test.txt"
+querypath="E:/PhD/Repo/Zxing/BugData/357.txt"
 my_file_handle = open (querypath)
 query=[]
 query=my_file_handle.read()

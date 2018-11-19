@@ -12,12 +12,12 @@ def goldset_creator(git_content_list):
             processed_file_path=process_file_path(file_path)
             print(processed_file_path)
             content_to_write = content_to_write + processed_file_path
-    file_read_write.writeFiles('E:\PhD\LSI\Repo\SWT\gitInfoSWTSingleFile.txt', str(content_to_write))
+    file_read_write.writeFiles('E:\PhD\LSI\Repo\AspectJ\gitInfoAspectJSingleFile.txt', str(content_to_write))
 
 def process_file_path(file_path):
     file_path_without_java=file_path[:-6]
     print (file_path_without_java)
-    last_Index = file_path_without_java.rfind('.')
+    last_Index = file_path_without_java.rfind('/')
     file_address = file_path[last_Index + 1 :]
     return file_address
 
@@ -31,7 +31,7 @@ def find(str, ch):
 
 
 
-file_read_write = FileReadWrite('E:\PhD\LSI\Repo\SWT\data\gitInfoSWT.txt')
+file_read_write = FileReadWrite('E:\PhD\LSI\Repo\AspectJ\data\gitInfoAspectJ.txt')
 git_content=[]
-git_content=file_read_write.fileReadSingleReturnListByLine('E:\PhD\LSI\Repo\SWT\data\gitInfoSWT.txt')
+git_content=file_read_write.fileReadSingleReturnListByLine('E:\PhD\LSI\Repo\AspectJ\data\gitInfoAspectJ.txt')
 goldset_creator(git_content)

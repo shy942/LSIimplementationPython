@@ -5,6 +5,16 @@ from util.FileReadWrite import FileReadWrite
 from operator import itemgetter
 from collections import OrderedDict
 
+
+def Find_how_much_related(query_content_all, source_file_path_info):
+    #Retrieve the .txt files which are bug report
+    bugIDfiles=[]
+    for content in source_file_path_info:
+        if '.txt' in content:
+            print (content)
+
+
+
 # Do the searching
 def LSI_search_method(query_content_all, vector_space, source_file_path_info, query_file_path_info):
     query_no=0
@@ -81,21 +91,24 @@ def find(str, ch):
 
 # Create the corpus
 file_content_all=[]
-corpus='Eclipse'
+corpus='SWT'
 creator = sourceCorpusCreator()
-sourcepath = "E:\PhD\LSI\Repo\\"+corpus+"\processedSourceCodes"
+sourcepath = "E:\PhD\LSI\Repo\\"+corpus+"\SourceAndBug\\"
 keywordsfilepath='E:\PhD\LSI\Repo\\'+corpus+'\data\keyword-documents.txt'
-querypath="E:\PhD\LSI\Repo\\"+corpus+"\BugData1KB\\"
-source_content_all=creator.CorpusCreator(sourcepath, '.java')
-source_file_path_info=creator.getFileP()
-print(len(source_file_path_info))
-#import pdb
-#pdb.set_trace()
+querypath="E:\PhD\LSI\Repo\\"+corpus+"\BugData\\"
+source_content_all={}
+source_content_all=creator.CorpusCreatorDict(sourcepath, '.java')
 
-# Create vector space model
+
+print ('Total files in corpus ')
+print(len(source_content_all))
+print (source_content_all)
+
 vector_space = VectorSpace(source_content_all)
-#print ("Keywords All")
-#print vector_space.vector_index_to_keyword_mapping  # Show the keywords
+file_path_all=vector_space.get_file_path_all()
+print (file_path_all)
+document_ID_file_info_mapping=vector_space.get_document_ID_file_info_mapping()
+print (document_ID_file_info_mapping)
 keywords_docs_string=str(vector_space.vector_index_to_keyword_mapping)
 file_read_write=FileReadWrite(sourcepath)
 file_read_write.writeFiles(keywordsfilepath, keywords_docs_string)
@@ -108,11 +121,11 @@ print vector_space.collection_of_document_term_vectors
 document_term_matrix=vector_space.collection_of_document_term_vectors
 
 # Create LSI model using TF-IDF model
-#tf_idf = TFIDF(document_term_matrix)
-#tf_idf_transformated_matrix=tf_idf.transform()
+tf_idf = TFIDF(document_term_matrix)
+tf_idf_transformated_matrix=tf_idf.transform()
 
 #print tf_idf_transformated_matrix
-lsa=LSA(document_term_matrix)
+lsa=LSA(tf_idf_transformated_matrix)
 #lsa = LSA(tf_idf_transformated_matrix)
 SVD_LSI_matrix=lsa.transform()
 print ("After applying SVD")
@@ -121,11 +134,14 @@ print (SVD_LSI_matrix)
 vector_space.setTransform(SVD_LSI_matrix)
 
 # Create query corpus
-query_content_all=creator.CorpusCreator(querypath, '.txt')
-query_file_path_info=creator.getFileP()
-print (query_file_path_info)
-print (query_content_all)
+#query_content_all=creator.CorpusCreator(querypath, '.txt')
+#query_file_path_info=creator.getFileP()
+#print (query_file_path_info)
+#print (query_content_all)
 
-file_read_write.writeFiles('E:\PhD\LSI\Repo\\'+corpus+'\data\source_info.txt', str(source_file_path_info))
-LSI_search_method(query_content_all, vector_space, source_file_path_info, query_file_path_info)
+file_read_write.writeFiles('E:\PhD\LSI\Repo\\'+corpus+'\data\source_info.txt', str(file_path_all))
+#LSI_search_method(query_content_all, vector_space, source_file_path_info, query_file_path_info)
+#print ("How relates a given documents with all other documents")
+# Show score for relatedness against document 1
+Find_how_much_related(file_content_all, file_path_all)
 
