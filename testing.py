@@ -6,12 +6,30 @@ from operator import itemgetter
 from collections import OrderedDict
 
 
-def Find_how_much_related(query_content_all, source_file_path_info):
+def Find_how_much_related(query_content_all, file_path_all, document_ID_file_info_mapping):
     #Retrieve the .txt files which are bug report
     bugIDfiles=[]
-    for content in source_file_path_info:
-        if '.txt' in content:
-            print (content)
+    #for content in source_file_path_info:
+     #   if '.txt' in content:
+      #      print (content)
+    query_no=1
+    for key in document_ID_file_info_mapping:
+
+        if '.txt' in key:
+            print ('Fuck you ' + key + ' ' + document_ID_file_info_mapping[key])
+            documnet_id=document_ID_file_info_mapping[key]
+            doc_id=int(documnet_id)
+            query=query_content_all[key]
+            content = []
+            for word in query.split():
+                content.append(word)
+            #print (vector_space.relatedBySVDmatrix(doc_id))
+            #resultPerQuery = vector_space.relatedBySVDmatrix(doc_id)
+            resultPerQuery=vector_space.searchInSVDmatrix(content)
+            sorted_result_per_query = create_result_output(resultPerQuery)
+            print (sorted_result_per_query)
+            writeToFile(sorted_result_per_query, 10, file_path_all, key, query_no)
+            query_no = query_no + 1
 
 
 
@@ -26,7 +44,7 @@ def LSI_search_method(query_content_all, vector_space, source_file_path_info, qu
         #print (vector_space.searchInSVDmatrix(content))
         resultPerQuery=vector_space.searchInSVDmatrix(content)
         sorted_result_per_query=create_result_output(resultPerQuery)
-        writeToFile (sorted_result_per_query, 10, source_file_path_info, query_file_path_info[query_no], query_no+1)
+        #writeToFile (sorted_result_per_query, 10, source_file_path_info, query_file_path_info[query_no], query_no+1)
         query_no=query_no+1
 
 
@@ -52,24 +70,27 @@ def get_sorted_result(result_content_per_query):
 
 
 
-def writeToFile(sorted_result_per_query, topK, source_file_path_info, queryFilePath, query_no):
+def writeToFile(sorted_result_per_query, topK, source_file_path_info, query_file_name, query_no):
     #print (sorted_result_per_query)
     #print (source_file_path_info)
     contentToWrite=''
-    queryID=process_file_path(queryFilePath)
-    print (queryFilePath)
+    queryID=query_file_name
+
     queryID=queryID[:-4]
+    print (queryID)
     index=0;
     for (i, j) in sorted_result_per_query:
-        print source_file_path_info[i], j
-        processed_file_address=process_file_path(source_file_path_info[i])
-        print queryID, processed_file_address, j
-        content = queryID + ',' + processed_file_address + ',' +str(j)
-        #contentToWrite.append(conetnt)
-        contentToWrite = contentToWrite + content + '\n'
-        if index > topK-2:
-            break
-        index = index + 1
+        if '.txt' not in source_file_path_info[i]:
+            print source_file_path_info[i], j
+            processed_file_address=process_file_path(source_file_path_info[i])
+            print queryID, processed_file_address, j
+
+            content = queryID + ',' + processed_file_address + ',' +str(j)
+                #contentToWrite.append(conetnt)
+            contentToWrite = contentToWrite + content + '\n'
+            if index > topK-2:
+                break
+            index = index + 1
     print (contentToWrite)
     file_read_write.writeFiles('E:\PhD\LSI\Repo\\'+corpus+'\data\Results/'+str(query_no)+'.txt', contentToWrite)
 
@@ -91,7 +112,7 @@ def find(str, ch):
 
 # Create the corpus
 file_content_all=[]
-corpus='SWT'
+corpus='Eclipse'
 creator = sourceCorpusCreator()
 sourcepath = "E:\PhD\LSI\Repo\\"+corpus+"\SourceAndBug\\"
 keywordsfilepath='E:\PhD\LSI\Repo\\'+corpus+'\data\keyword-documents.txt'
@@ -119,7 +140,7 @@ print ("Keyords-document vector/matrix")
 print vector_space.collection_of_document_term_vectors
 
 document_term_matrix=vector_space.collection_of_document_term_vectors
-
+document_ID_file_info_mapping=vector_space.get_document_ID_file_info_mapping()
 # Create LSI model using TF-IDF model
 tf_idf = TFIDF(document_term_matrix)
 tf_idf_transformated_matrix=tf_idf.transform()
@@ -134,14 +155,15 @@ print (SVD_LSI_matrix)
 vector_space.setTransform(SVD_LSI_matrix)
 
 # Create query corpus
-#query_content_all=creator.CorpusCreator(querypath, '.txt')
-#query_file_path_info=creator.getFileP()
-#print (query_file_path_info)
-#print (query_content_all)
-
+query_content_all=creator.CorpusCreatorDict(querypath, '.txt')
+query_file_path_info=creator.getFileP()
+print (query_file_path_info)
+print (query_content_all)
+#import pdb
+#pdb.set_trace()
 file_read_write.writeFiles('E:\PhD\LSI\Repo\\'+corpus+'\data\source_info.txt', str(file_path_all))
 #LSI_search_method(query_content_all, vector_space, source_file_path_info, query_file_path_info)
 #print ("How relates a given documents with all other documents")
 # Show score for relatedness against document 1
-Find_how_much_related(file_content_all, file_path_all)
+Find_how_much_related(query_content_all, file_path_all, document_ID_file_info_mapping)
 

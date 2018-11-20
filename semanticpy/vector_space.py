@@ -25,6 +25,7 @@ class VectorSpace:
     file_path_all=[]
     document_ID_file_info_mapping=[]
     vector_index_to_keyword_mapping = []
+    document_ID_file_info_mapping={}
     transformed_matrix=[]
     parser = None
 
@@ -40,7 +41,7 @@ class VectorSpace:
     	self.collection_of_document_term_vectors = []
         self.documents = []
         self.file_path_all=[]
-        self.document_ID_file_info_mapping=[]
+        self.document_ID_file_info_mapping={}
         self.transformed_matrix = []
     	self.parser = Parser()
 
@@ -49,11 +50,13 @@ class VectorSpace:
     		self._build(self.documents, transforms)
 
     def _addToList(self,documents_dict):
-        index=1;
+        i=1;
         for key in documents_dict:
             self.documents.append(documents_dict[key])
             self.file_path_all.append(key)
-            #self.document_ID_file_info_mapping[key]=index;
+            self.document_ID_file_info_mapping[key] = str (i)
+            print key, i
+            i=i+1
 
     def get_file_path_all(self):
         return self.file_path_all
@@ -71,7 +74,11 @@ class VectorSpace:
         return ratings
 
     def relatedBySVDmatrix(self, document_id):
-        ratings = [self._cosine(self.transformed_matrix[document_id], document_vector) for document_vector in self.transformed_matrix]
+        #import pdb
+        #pdb.set_trace()
+        print (self.collection_of_document_term_vectors[document_id])
+        ratings = [self._cosine(self.collection_of_document_term_vectors[document_id], document_vector) for document_vector in self.transformed_matrix]
+        return ratings
 
     def setTransform(self, transforms):
         self.transformed_matrix=transforms
@@ -79,6 +86,7 @@ class VectorSpace:
 
     def searchInSVDmatrix(self, searchList):
         queryVector = self._build_query_vector(searchList)
+        print (queryVector)
         ratings = [self._cosine(queryVector, documentVector) for documentVector in self.transformed_matrix]
         return ratings
 

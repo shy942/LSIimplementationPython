@@ -9,7 +9,7 @@ class LSA(Transform):
 	    contain.
     """
 
-    def transform(self, dimensions=1):
+    def transform(self, dimensions=6500):
 		""" Calculate SVD of objects matrix: U . SIGMA . VT = MATRIX 
 		    Reduce the dimension of sigma by specified factor producing sigma'. 
 		    Then dot product the matrices:  U . SIGMA' . VT = MATRIX'

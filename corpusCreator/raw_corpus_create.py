@@ -35,10 +35,10 @@ def processFileContent(file_content):
                     processd_final_content = processd_final_content + word.lower() + ' '
     return processd_final_content
 
-corpus='SWT'
-topdir = 'E:\PhD\LSI\Repo\\'+corpus+'\Source\swt-3.1'
+corpus='AspectJ'
+topdir = 'E:\PhD\LSI\Repo\\'+corpus+'\Source\ibugs_aspectj-1.3\ibugs_aspectj-1.3'
 exten = '.java'
-pathToWrite = 'E:\PhD\LSI\Repo\\'+corpus+'\processedSourceCodes'
+pathToWrite = 'E:\PhD\LSI\Repo\\'+corpus+'\processedSourceCodesibugs_aspectj-1.3'
 
 file_read_write=FileReadWrite(topdir)
 os.path.walk(topdir, traverse_folder, (exten, pathToWrite))
