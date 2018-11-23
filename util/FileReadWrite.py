@@ -39,7 +39,7 @@ class FileReadWrite:
         if(os.path.exists(fpath)):
             self.item = os.listdir(fpath)
             for i in range(0,len(self.item)):
-                print(i)
+                #print(i)
                 file_name=self.item.pop(0);
                 full_file_path = os.path.join(fpath, file_name)
                 #print (full_file_path)
@@ -51,7 +51,7 @@ class FileReadWrite:
                                 content+=word+' '
                                 #content.append(word)
                         f.close()
-                    print(content)
+                    #print(content)
                     self.file_content_dict[file_name]= content
                     self.file_path_info.insert(i, full_file_path)
 

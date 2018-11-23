@@ -6,7 +6,7 @@ from operator import itemgetter
 from collections import OrderedDict
 
 
-def Find_how_much_related(query_content_all, file_path_all, document_ID_file_info_mapping):
+def Find_how_much_related(file_path_all, document_ID_file_info_mapping):
     #Retrieve the .txt files which are bug report
     bugIDfiles=[]
     #for content in source_file_path_info:
@@ -16,16 +16,18 @@ def Find_how_much_related(query_content_all, file_path_all, document_ID_file_inf
     for key in document_ID_file_info_mapping:
 
         if '.txt' in key:
-            print ('Fuck you ' + key + ' ' + document_ID_file_info_mapping[key])
+            #print ('Fuck you ' + key + ' ' + document_ID_file_info_mapping[key])
             documnet_id=document_ID_file_info_mapping[key]
             doc_id=int(documnet_id)
-            query=query_content_all[key]
-            content = []
-            for word in query.split():
-                content.append(word)
-            #print (vector_space.relatedBySVDmatrix(doc_id))
-            #resultPerQuery = vector_space.relatedBySVDmatrix(doc_id)
-            resultPerQuery=vector_space.searchInSVDmatrix(content)
+
+            print doc_id, key
+            #query=query_content_all[key]
+            #content = []
+            #for word in query.split():
+             #   content.append(word)
+            print (vector_space.relatedBySVDmatrix(doc_id))
+            resultPerQuery = vector_space.relatedBySVDmatrix(doc_id)
+            #resultPerQuery=vector_space.searchInSVDmatrix(content)
             sorted_result_per_query = create_result_output(resultPerQuery)
             print (sorted_result_per_query)
             writeToFile(sorted_result_per_query, 10, file_path_all, key, query_no)
@@ -112,11 +114,11 @@ def find(str, ch):
 
 # Create the corpus
 file_content_all=[]
-corpus='Eclipse'
+corpus='AspectJ'
 creator = sourceCorpusCreator()
 sourcepath = "E:\PhD\LSI\Repo\\"+corpus+"\SourceAndBug\\"
 keywordsfilepath='E:\PhD\LSI\Repo\\'+corpus+'\data\keyword-documents.txt'
-querypath="E:\PhD\LSI\Repo\\"+corpus+"\BugData\\"
+#querypath="E:\PhD\LSI\Repo\\"+corpus+"\BugData\\"
 source_content_all={}
 source_content_all=creator.CorpusCreatorDict(sourcepath, '.java')
 
@@ -137,33 +139,36 @@ print (len(vector_space.vector_index_to_keyword_mapping))
 #import pdb
 #pdb.set_trace()
 print ("Keyords-document vector/matrix")
-print vector_space.collection_of_document_term_vectors
+print ('length of vector_space.collection_of_document_term_vectors')
+print len(vector_space.collection_of_document_term_vectors)
 
 document_term_matrix=vector_space.collection_of_document_term_vectors
 document_ID_file_info_mapping=vector_space.get_document_ID_file_info_mapping()
 # Create LSI model using TF-IDF model
 tf_idf = TFIDF(document_term_matrix)
 tf_idf_transformated_matrix=tf_idf.transform()
-
-#print tf_idf_transformated_matrix
+print ('length of tf_idf_transformated_matrix')
+print len(tf_idf_transformated_matrix)
 lsa=LSA(tf_idf_transformated_matrix)
 #lsa = LSA(tf_idf_transformated_matrix)
 SVD_LSI_matrix=lsa.transform()
-print ("After applying SVD")
+print ('length of SVD_LSI_matrix')
+print (len(SVD_LSI_matrix))
 print (SVD_LSI_matrix)
 #print ("Create a instance of tranformed matrix in vector_space class?")
 vector_space.setTransform(SVD_LSI_matrix)
 
 # Create query corpus
-query_content_all=creator.CorpusCreatorDict(querypath, '.txt')
-query_file_path_info=creator.getFileP()
-print (query_file_path_info)
-print (query_content_all)
+#query_content_all=creator.CorpusCreatorDict(querypath, '.txt')
+#query_file_path_info=creator.getFileP()
+#print (query_file_path_info)
+#print (query_content_all)
 #import pdb
 #pdb.set_trace()
 file_read_write.writeFiles('E:\PhD\LSI\Repo\\'+corpus+'\data\source_info.txt', str(file_path_all))
 #LSI_search_method(query_content_all, vector_space, source_file_path_info, query_file_path_info)
 #print ("How relates a given documents with all other documents")
 # Show score for relatedness against document 1
-Find_how_much_related(query_content_all, file_path_all, document_ID_file_info_mapping)
+#Find_how_much_related(query_content_all, file_path_all, document_ID_file_info_mapping)
+Find_how_much_related(file_path_all, document_ID_file_info_mapping)
 

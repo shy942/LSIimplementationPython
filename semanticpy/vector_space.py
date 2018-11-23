@@ -50,7 +50,7 @@ class VectorSpace:
     		self._build(self.documents, transforms)
 
     def _addToList(self,documents_dict):
-        i=1;
+        i=0;
         for key in documents_dict:
             self.documents.append(documents_dict[key])
             self.file_path_all.append(key)
@@ -74,10 +74,10 @@ class VectorSpace:
         return ratings
 
     def relatedBySVDmatrix(self, document_id):
-        #import pdb
-        #pdb.set_trace()
-        print (self.collection_of_document_term_vectors[document_id])
-        ratings = [self._cosine(self.collection_of_document_term_vectors[document_id], document_vector) for document_vector in self.transformed_matrix]
+
+        print (self.transformed_matrix[document_id])
+        ratings = [self._cosine(self.transformed_matrix[document_id], document_vector) for document_vector in self.transformed_matrix]
+        #ratings.sort(reverse=True)
         return ratings
 
     def setTransform(self, transforms):
@@ -88,6 +88,7 @@ class VectorSpace:
         queryVector = self._build_query_vector(searchList)
         print (queryVector)
         ratings = [self._cosine(queryVector, documentVector) for documentVector in self.transformed_matrix]
+        #ratings.sort(reverse=True)
         return ratings
 
     def search(self, searchList):
