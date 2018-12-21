@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor implements singleton this singleton jan hannemann gregor kiczales printer subclass printer singleton creates printer subclass 

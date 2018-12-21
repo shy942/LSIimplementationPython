@@ -1,0 +1,1 @@
+copyright contributors all this eclipse public license contributors adrian colyer initial part string object exception string serializable number of thingies object 

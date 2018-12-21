@@ -1,0 +1,1 @@
+copyright contributors this common public license contributors to window preferences java templates to window preferences java code generation test switchy string system system system system system 

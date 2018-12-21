@@ -1,0 +1,1 @@
+main string private class private class thang string 

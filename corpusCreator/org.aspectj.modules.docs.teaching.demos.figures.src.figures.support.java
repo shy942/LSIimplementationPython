@@ -1,0 +1,1 @@
+copyright palo alto research center incorporated all rights reserved log string buffer string buffer object object unsupported operation exception string class name class string name index of string string string length 

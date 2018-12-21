@@ -1,0 +1,1 @@
+copyright corporation all this common public license contributors corporation method method invocation join point method invocation closure invocation join point closure method invocation method invocation closure join point javadoc method invocation method method method method static part 

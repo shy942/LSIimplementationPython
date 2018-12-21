@@ -1,0 +1,1 @@
+created jan mik kersten util executing on java5 string system property 

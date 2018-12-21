@@ -1,0 +1,1 @@
+aspect main string 

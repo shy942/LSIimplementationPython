@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor prints represents concrete implementation bridge jan hannemann gregor kiczales star implementation screen implementation does system line system prints system decor system prints system text string system 

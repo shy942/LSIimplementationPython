@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor concrete flyweight jan hannemann gregor kiczales printable flyweight factory whitespace flyweight printable flyweight the creates whitespace flyweight prints system character upper case 

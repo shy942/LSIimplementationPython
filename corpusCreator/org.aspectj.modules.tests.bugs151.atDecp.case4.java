@@ -1,0 +1,1 @@
+aspect declare parents moody aspect annotation mood indicator declare parents annotation mood implementor impl moody impl moody interface 

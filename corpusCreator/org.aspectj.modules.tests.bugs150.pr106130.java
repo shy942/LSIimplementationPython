@@ -1,0 +1,1 @@
+lots of vars string system 

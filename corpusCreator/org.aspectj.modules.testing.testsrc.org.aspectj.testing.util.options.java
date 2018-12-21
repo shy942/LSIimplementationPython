@@ -1,0 +1,1 @@
+copyright contributors all this common public license contributors wes isberg test case values test test case values test string invert invert invert invert invert invert invert invert invert invert invert invert invert invert invert invert values true true true string string buffer string buffer string string buffer 

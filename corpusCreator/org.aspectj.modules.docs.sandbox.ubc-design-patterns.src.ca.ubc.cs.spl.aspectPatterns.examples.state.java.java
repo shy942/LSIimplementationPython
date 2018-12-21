@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor defines state the first first jan hannemann gregor kiczales queue state tries returns context queue context object returns context object first queue context tries returns context first queue context 

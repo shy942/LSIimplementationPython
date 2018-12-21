@@ -1,0 +1,1 @@
+copyright xerox corporation palo alto research center incorporated all this common public license contributors xerox message source location used mik kersten task list manager add location sourceline task string source location location message kind sourceline task message warning add project task string message kind delete tasks 

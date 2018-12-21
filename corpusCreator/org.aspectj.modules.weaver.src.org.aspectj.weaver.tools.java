@@ -1,0 +1,1 @@
+copyright corporation all this common public license contributors matthew webster adrian colyer martin lippert an weaving adaptor weaving class loader generated class handler returns weaving adaptor aspect ls 

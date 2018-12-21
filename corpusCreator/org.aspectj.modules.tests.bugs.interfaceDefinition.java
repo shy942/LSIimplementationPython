@@ -1,0 +1,1 @@
+use main1 string my interface interface definition 

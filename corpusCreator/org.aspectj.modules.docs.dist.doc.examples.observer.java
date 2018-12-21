@@ -1,0 +1,1 @@
+copyright xerox corporation all use any united states this xerox corporation vector subject observer protocol impl subject observer protocol button subject object button data color label observer color label cycle changes subject button 

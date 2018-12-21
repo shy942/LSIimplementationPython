@@ -1,0 +1,1 @@
+copyright xerox corporation palo alto research center incorporated all this common public license contributors xerox util tests test case string test test suite test suite util tests name suite test unit test suite test util test unit util tests string 

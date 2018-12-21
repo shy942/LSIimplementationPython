@@ -1,0 +1,1 @@
+copyright contributors all this common public license contributors wes isberg preprocess wes isberg command editor edit string string string command string 

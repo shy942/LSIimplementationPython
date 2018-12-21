@@ -1,0 +1,1 @@
+a2 string inter class 

@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor implements jan hannemann gregor kiczales string transformer transforms string to upper string upper case transforms string to lower string lower case 

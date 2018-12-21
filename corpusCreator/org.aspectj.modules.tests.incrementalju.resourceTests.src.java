@@ -1,0 +1,1 @@
+copyright corporation all this common public license contributors adrian colyer used hello hello string system 

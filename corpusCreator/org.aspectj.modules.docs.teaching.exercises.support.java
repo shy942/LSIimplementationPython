@@ -1,0 +1,1 @@
+copyright palo alto research center incorporated all this common public license contributors list array list log list array list string list data 

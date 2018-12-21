@@ -1,0 +1,1 @@
+tester tester type pattern from stefan intro error location string tester string target class target class tester all events my introduction aspect target string target class method string target target class target class string intro error location intro error location tester method method target class tester equal method round 

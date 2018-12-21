@@ -1,0 +1,1 @@
+copyright contributors all this eclipse public license contributors adrian colyer initial type pattern default type pattern impl type pattern string pattern type pattern impl string pattern javadoc type pattern string string string pattern string string string 

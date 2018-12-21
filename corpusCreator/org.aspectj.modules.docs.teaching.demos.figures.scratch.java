@@ -1,0 +1,1 @@
+history updating figure element figure element figure element canvas history figure element figure element figure element value point value value illegal argument exception 

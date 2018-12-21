@@ -1,0 +1,1 @@
+aspect two for the price of one before pointcut entry 

@@ -1,0 +1,1 @@
+simple tracing call sample class call system entering join point call system exiting join point 

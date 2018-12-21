@@ -1,0 +1,1 @@
+simple enum red orange yellow green blue indigo violet retention retention policy annotation enum element simple enum annotation enum element simple enum red 

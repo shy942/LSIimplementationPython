@@ -1,0 +1,1 @@
+copyright palo alto research center incorporated all this common public license contributors method binding synthetic method binding simple synthetic access method binding synthetic method binding simple synthetic access method binding method binding class class type type simple synthetic access method binding method binding 

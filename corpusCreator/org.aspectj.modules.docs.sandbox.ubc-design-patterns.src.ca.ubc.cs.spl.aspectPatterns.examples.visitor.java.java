@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor defines visitor jan hannemann gregor kiczales visitable accepts visitor node visitor binary tree visitor 

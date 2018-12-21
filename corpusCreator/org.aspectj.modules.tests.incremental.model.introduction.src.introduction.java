@@ -1,0 +1,1 @@
+copyright xerox corporation all use any united states this xerox corporation point rectangular rectangular theta polar rho polar rectangular polar theta rho theta rho polar rectangular polar math math rectangular math math string string theta rho string point point system rectangular system polar math system polar system 

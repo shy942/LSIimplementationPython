@@ -1,0 +1,1 @@
+tester driver string tester equal foo it tester equal bar it foo it foo foo aspect foo result math math result bar it bar bar aspect bar bar result math math result 

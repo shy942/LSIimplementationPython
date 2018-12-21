@@ -1,0 +1,1 @@
+test2 string base base type reflexive type reflexive concrete base 

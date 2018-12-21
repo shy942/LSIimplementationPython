@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f0ced69-b56b-4c5d-bf06-5cb9a4b12407" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/corpusCreator/bug_corpus_creator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticpy/transform/lsa.py" beforeDir="false" afterPath="$PROJECT_DIR$/semanticpy/transform/lsa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticpy/vector_space.py" beforeDir="false" afterPath="$PROJECT_DIR$/semanticpy/vector_space.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpusCreator/raw_corpus_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/corpusCreator/raw_corpus_create.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/FileReadWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/FileReadWrite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/goldset_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/goldset_creator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,26 +20,29 @@
     <SUITE FILE_PATH="coverage/semanticpy_me$raw_corpus_create.coverage" NAME="raw_corpus_create Coverage Results" MODIFIED="1542314285521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/corpusCreator" />
     <SUITE FILE_PATH="coverage/semanticpy_me$testing.coverage" NAME="testing Coverage Results" MODIFIED="1542664392616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/semanticpy_me$tfidf.coverage" NAME="tfidf Coverage Results" MODIFIED="1541697725098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semanticpy/transform" />
-    <SUITE FILE_PATH="coverage/semanticpy_me$goldset_creator.coverage" NAME="goldset_creator Coverage Results" MODIFIED="1542389086323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/semanticpy_me$goldset_creator.coverage" NAME="goldset_creator Coverage Results" MODIFIED="1545249256122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
     <SUITE FILE_PATH="coverage/semanticpy_me$FileReadWrite.coverage" NAME="FileReadWrite Coverage Results" MODIFIED="1541708570276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1348890589">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.110" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.173" value="1" />
+          <entry key="project.open.time.222" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="COPYING" value="1" />
-          <entry key="py" value="72" />
+          <entry key="py" value="81" />
           <entry key="stop" value="2" />
           <entry key="txt" value="1" />
         </counts>
@@ -48,21 +50,21 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="72" />
+          <entry key="Python" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="13050" />
+          <entry key="Python" value="14793" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="goldset_creator" value="23" />
-          <entry key="py" value="12696" />
-          <entry key="raw_corpus_create" value="105" />
+          <entry key="goldset_creator" value="75" />
+          <entry key="py" value="14326" />
+          <entry key="raw_corpus_create" value="166" />
           <entry key="testing" value="220" />
           <entry key="vector_space" value="6" />
         </counts>
@@ -72,42 +74,47 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="152" column="24" lean-forward="true" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#67#0" expanded="true" />
-                <marker date="1543009486466" expanded="true" signature="359:364" ph="..." />
-                <marker date="1543009486466" expanded="true" signature="359:1411" ph="..." />
-                <marker date="1543009486466" expanded="true" signature="3856:3954" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/goldset_creator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="210">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding>
-                <marker date="1543009692202" expanded="true" signature="105:3016" ph="..." />
-                <marker date="1543009692202" expanded="true" signature="2213:3016" ph="..." />
-                <marker date="1543009692202" expanded="true" signature="2732:2999" ph="..." />
+                <marker date="1545424020388" expanded="true" signature="4163:4168" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semanticpy/transform/lsa.py">
+        <entry file="file://$PROJECT_DIR$/corpusCreator/source_corpus_creator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+            <state relative-caret-position="420">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1542661124276" expanded="true" signature="324:329" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpusCreator/raw_corpus_create.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1302">
+              <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1545248892939" expanded="true" signature="922:2046" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/ntpath.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5565">
+              <caret line="272" selection-start-line="272" selection-end-line="272" />
             </state>
           </provider>
         </entry>
@@ -115,8 +122,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_umd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
+            <state relative-caret-position="3990">
               <caret line="196" selection-start-line="196" selection-end-line="196" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2478">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
+              <folding>
+                <element signature="e#0#67#0" expanded="true" />
+                <marker date="1545172190941" expanded="true" signature="359:364" ph="..." />
+                <marker date="1545172190941" expanded="true" signature="359:1411" ph="..." />
+                <marker date="1545172190941" expanded="true" signature="3856:3954" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,13 +146,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/semanticpy/vector_space.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="78" column="60" lean-forward="true" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
+            <state relative-caret-position="1512">
+              <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
                 <marker date="1542835677205" expanded="true" signature="943:948" ph="..." />
                 <marker date="1542835677205" expanded="true" signature="1949:2006" ph="..." />
-                <marker date="1542835677205" expanded="true" signature="2591:2791" ph="..." />
               </folding>
             </state>
           </provider>
@@ -139,8 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/FileReadWrite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="1659">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <marker date="1543004129562" expanded="true" signature="62:1215" ph="..." />
@@ -170,12 +191,13 @@
         <option value="$PROJECT_DIR$/semanticpy/LSIsearch.py" />
         <option value="$PROJECT_DIR$/corpusCreator/source_corpus_creator.py" />
         <option value="$PROJECT_DIR$/testLSI.py" />
-        <option value="$PROJECT_DIR$/corpusCreator/raw_corpus_create.py" />
         <option value="$PROJECT_DIR$/semanticpy/vector_space.py" />
         <option value="$PROJECT_DIR$/util/FileReadWrite.py" />
-        <option value="$PROJECT_DIR$/testing.py" />
-        <option value="$PROJECT_DIR$/util/goldset_creator.py" />
         <option value="$PROJECT_DIR$/semanticpy/transform/lsa.py" />
+        <option value="$PROJECT_DIR$/corpusCreator/bug_corpus_creator.py" />
+        <option value="$PROJECT_DIR$/testing.py" />
+        <option value="$PROJECT_DIR$/corpusCreator/raw_corpus_create.py" />
+        <option value="$PROJECT_DIR$/util/goldset_creator.py" />
       </list>
     </option>
   </component>
@@ -185,7 +207,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -208,23 +230,7 @@
             <path>
               <item name="semanticpy-me" type="b2602c69:ProjectViewProjectNode" />
               <item name="semanticpy-me" type="462c0819:PsiDirectoryNode" />
-              <item name="corpusCreator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semanticpy-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semanticpy-me" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semanticpy-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semanticpy-me" type="462c0819:PsiDirectoryNode" />
-              <item name="semanticpy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semanticpy-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semanticpy-me" type="462c0819:PsiDirectoryNode" />
-              <item name="semanticpy" type="462c0819:PsiDirectoryNode" />
-              <item name="transform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="semanticpy-me" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testing">
+  <component name="RunManager" selected="Python.goldset_creator">
     <configuration name="FileReadWrite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="semanticpy-me" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -340,6 +346,9 @@
       <module name="semanticpy-me" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/corpusCreator" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -381,6 +390,9 @@
       <module name="semanticpy-me" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -400,6 +412,9 @@
       <module name="semanticpy-me" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/semanticpy" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -425,8 +440,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testing" />
         <item itemvalue="Python.goldset_creator" />
+        <item itemvalue="Python.testing" />
         <item itemvalue="Python.vector_space" />
         <item itemvalue="Python.testLSI" />
         <item itemvalue="Python.FileReadWrite" />
@@ -447,10 +462,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26476908" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2803437" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -465,7 +479,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053704" side_tool="true" weight="0.34915254" />
       <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49946293" weight="0.34915254" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299435" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.44745764" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.46892655" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -534,13 +548,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/semanticpy/transform/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/english.stop">
       <provider selected="true" editor-type-id="text-editor" />
@@ -606,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="272" selection-start-line="272" selection-end-line="272" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/re.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -631,9 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="22" column="50" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,16 +649,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semanticpy/transform/lsa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpusCreator/bug_corpus_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/goldset_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1545424020388" expanded="true" signature="4163:4168" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corpusCreator/source_corpus_creator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="74" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="74" />
+        <state relative-caret-position="420">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <marker date="1542661124276" expanded="true" signature="324:329" ph="..." />
           </folding>
@@ -669,79 +688,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/corpusCreator/raw_corpus_create.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="40" column="81" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="81" />
+        <state relative-caret-position="1302">
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1542749614147" expanded="true" signature="685:1298" ph="..." />
+            <marker date="1545248892939" expanded="true" signature="922:2046" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5565">
+          <caret line="272" selection-start-line="272" selection-end-line="272" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_umd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
+        <state relative-caret-position="3990">
           <caret line="196" selection-start-line="196" selection-end-line="196" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2478">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+            <marker date="1545172190941" expanded="true" signature="359:364" ph="..." />
+            <marker date="1545172190941" expanded="true" signature="359:1411" ph="..." />
+            <marker date="1545172190941" expanded="true" signature="3856:3954" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/semanticpy/vector_space.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="78" column="60" lean-forward="true" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
+        <state relative-caret-position="1512">
+          <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <marker date="1542835677205" expanded="true" signature="943:948" ph="..." />
             <marker date="1542835677205" expanded="true" signature="1949:2006" ph="..." />
-            <marker date="1542835677205" expanded="true" signature="2591:2791" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util/FileReadWrite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="1659">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <marker date="1543004129562" expanded="true" signature="62:1215" ph="..." />
             <marker date="1543004129562" expanded="true" signature="318:319" ph="..." />
             <marker date="1543004129562" expanded="true" signature="2216:2257" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/goldset_creator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <marker date="1543009692202" expanded="true" signature="105:3016" ph="..." />
-            <marker date="1543009692202" expanded="true" signature="2213:3016" ph="..." />
-            <marker date="1543009692202" expanded="true" signature="2732:2999" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semanticpy/transform/lsa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="152" column="24" lean-forward="true" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-            <marker date="1543009486466" expanded="true" signature="359:364" ph="..." />
-            <marker date="1543009486466" expanded="true" signature="359:1411" ph="..." />
-            <marker date="1543009486466" expanded="true" signature="3856:3954" ph="..." />
           </folding>
         </state>
       </provider>

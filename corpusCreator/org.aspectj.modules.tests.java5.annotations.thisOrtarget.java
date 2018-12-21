@@ -1,0 +1,1 @@
+testing annotations string something something something something something something my class retention annotation something my annotation something my inheritable annotation my annotation something something my class retention annotation retention retention policy my annotation retention retention policy inherited my inheritable annotation 

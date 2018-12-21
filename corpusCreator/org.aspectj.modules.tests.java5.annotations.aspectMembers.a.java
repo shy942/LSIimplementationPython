@@ -1,0 +1,1 @@
+to window preferences java code style code templates type annotation foo field annotation method annotation foo method annotation 

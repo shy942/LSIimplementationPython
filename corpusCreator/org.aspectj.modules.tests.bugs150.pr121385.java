@@ -1,0 +1,1 @@
+aspect pointcut aspect world at pointcut hello world 

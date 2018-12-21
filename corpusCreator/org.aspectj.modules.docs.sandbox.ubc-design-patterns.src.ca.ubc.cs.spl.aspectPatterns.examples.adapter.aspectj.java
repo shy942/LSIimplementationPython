@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor declares acts target jan hannemann gregor kiczales writer prints in target printer adapter string 

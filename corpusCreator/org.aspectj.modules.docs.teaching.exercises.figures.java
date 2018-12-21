@@ -1,0 +1,1 @@
+copyright palo alto research center incorporated all this common public license contributors this slothful point shape figure element slothful point system slothful string string slothful point shape shape ellipse2 float 

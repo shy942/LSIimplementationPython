@@ -1,0 +1,1 @@
+copyright corporation all this common public license contributors adrian colyer world hello system world 

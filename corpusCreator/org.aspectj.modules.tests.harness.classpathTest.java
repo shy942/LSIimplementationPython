@@ -1,0 +1,1 @@
+tester global class file main string tester class file true class file true tester global true global true 

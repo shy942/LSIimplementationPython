@@ -1,0 +1,1 @@
+test aspect string tester all events tester event method tester event method tester event method tester event int tester event int tester event int tester event tester event method tester join point static part system join point static part 

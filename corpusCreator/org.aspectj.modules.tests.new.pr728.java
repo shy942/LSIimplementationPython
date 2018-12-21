@@ -1,0 +1,1 @@
+interface aspect method another class inner class tester string another class inner class aspect method another class inner class string string method 

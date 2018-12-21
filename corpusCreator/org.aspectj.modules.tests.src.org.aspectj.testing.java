@@ -1,0 +1,1 @@
+mode java this aspect the mozilla public license version license license you license software license see license license the original code aspect the initial developer original code xerox corporation portions xerox corporation copyright xerox corporation all rights reserved contributor harness harness harness harness string string exception harness 

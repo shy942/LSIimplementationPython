@@ -1,0 +1,1 @@
+exception derived base derived exception clone not supported exception derived non static non static derived derived 

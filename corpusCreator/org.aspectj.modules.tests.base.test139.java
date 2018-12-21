@@ -1,0 +1,1 @@
+tester driver c2 c2 tester equal string c1 integer c2 c1 integer c2 c1 c1 c1 

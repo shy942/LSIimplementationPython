@@ -1,0 +1,1 @@
+tester package packages and advice cf string package class1 package class1 tester equal it tester equal it to class2 string string string string it string package class1 package class2 cf string a1 a1 string 

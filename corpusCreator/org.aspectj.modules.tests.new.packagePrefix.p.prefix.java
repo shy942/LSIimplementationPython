@@ -1,0 +1,1 @@
+tester some class string code tester code 

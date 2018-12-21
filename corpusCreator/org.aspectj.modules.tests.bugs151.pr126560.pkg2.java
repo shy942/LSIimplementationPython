@@ -1,0 +1,1 @@
+aspect declare warning declare error in one file aspect deow aspect declare warning in one file string hello declare error in one file string hi 

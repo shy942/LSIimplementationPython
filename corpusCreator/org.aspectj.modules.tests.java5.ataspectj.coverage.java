@@ -1,0 +1,1 @@
+declare warning declare warning call string message this call string call 

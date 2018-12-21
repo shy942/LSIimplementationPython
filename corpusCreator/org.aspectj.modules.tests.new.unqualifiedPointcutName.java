@@ -1,0 +1,1 @@
+tester driver string string my object tester equal my point cuts string code calls my aspect my object my point cuts calls my object driver my object driver 

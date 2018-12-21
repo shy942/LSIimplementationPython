@@ -1,0 +1,1 @@
+class1 string it aspect1 aspect1 of aspect1 constructor aspect1 declared constructors accessible aspect1 instance object exception error class name 

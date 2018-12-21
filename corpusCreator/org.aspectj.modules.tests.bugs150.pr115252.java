@@ -1,0 +1,1 @@
+target element type target element type type annotation target element type method annotation target element type field annotation or type pattern field annotation field annotation pointcut field annotation method annotation pointcut pointcut field annotation type annotation pointcut2 field annotation type annotation pointcut2 pointcut2 

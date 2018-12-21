@@ -1,0 +1,1 @@
+copyright xerox corporation all use any united states this xerox corporation point return return set rectangular set move rectangular make string string 

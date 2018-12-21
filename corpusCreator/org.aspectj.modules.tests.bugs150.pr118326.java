@@ -1,0 +1,1 @@
+foo string foo foo 

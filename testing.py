@@ -116,7 +116,7 @@ def find(str, ch):
 file_content_all=[]
 corpus='AspectJ'
 creator = sourceCorpusCreator()
-sourcepath = "E:\PhD\LSI\Repo\\"+corpus+"\SourceAndBug\\"
+sourcepath = "E:\PhD\LSI\Repo\\"+corpus+"\SourceAndBugData244\\"
 keywordsfilepath='E:\PhD\LSI\Repo\\'+corpus+'\data\keyword-documents.txt'
 #querypath="E:\PhD\LSI\Repo\\"+corpus+"\BugData\\"
 source_content_all={}

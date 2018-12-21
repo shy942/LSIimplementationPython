@@ -1,0 +1,1 @@
+exception good string good bar type field good type method good system system point serializable point observable point privileged aspect 

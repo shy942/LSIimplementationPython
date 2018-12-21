@@ -1,0 +1,1 @@
+class with nested aspect2 inner class nested aspect class with nested aspect 

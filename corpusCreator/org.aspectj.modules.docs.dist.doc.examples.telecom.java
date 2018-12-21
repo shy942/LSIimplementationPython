@@ -1,0 +1,1 @@
+copyright xerox corporation all use any united states this xerox corporation this abstract simulation timing simulation abstract simulation string system timing timing simulation print customer timing timing of system total connect time 

@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor defines jan hannemann gregor kiczales open list simple list returns appends object removes object returns object 

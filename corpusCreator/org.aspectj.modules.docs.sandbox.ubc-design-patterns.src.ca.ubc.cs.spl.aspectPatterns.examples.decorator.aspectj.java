@@ -1,0 +1,1 @@
+patterns mode java this the mozilla public license version license license you license software license see license license the original code patterns for contributor implements this bracket decorator the jan hannemann gregor kiczales star decorator star decorator bracket decorator identifies concrete output string call string concrete output string adds string call decorates 

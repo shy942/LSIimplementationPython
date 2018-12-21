@@ -7,6 +7,8 @@ def traverse_folder((ext, pathToWrite), dirname, names):
 
     for file_name in names:
         if file_name.lower().endswith(ext):
+            print (dirname)
+            processed_file_path=process_file_path(dirname)+".java"
 
             print(os.path.join(dirname, file_name))
             file_content=file_read_write.fileReadSingle(os.path.join(dirname, file_name))
@@ -14,7 +16,9 @@ def traverse_folder((ext, pathToWrite), dirname, names):
 
             process_file_content=processFileContent(file_content)
             print (process_file_content)
-            file_read_write.writeFiles(pathToWrite+'/'+file_name, process_file_content)
+            print (pathToWrite+'/'+file_name)
+            file_read_write.writeFiles(pathToWrite+'\\'+file_name, process_file_content)
+            #file_read_write.writeFiles(pathToWrite+processed_file_path, process_file_content)
             #import pdb
             #pdb.set_trace()
 
@@ -34,11 +38,29 @@ def processFileContent(file_content):
                     print (word)
                     processd_final_content = processd_final_content + word.lower() + ' '
     return processd_final_content
+def process_file_path (file_path):
+    #print (file_path.rfind('/'))
+    print(file_path)
+    file_path_new=file_path.replace("\\", ",")
+    print(file_path_new)
 
-corpus='AspectJ'
-topdir = 'E:\PhD\LSI\Repo\\'+corpus+'\Source\ibugs_aspectj-1.3\ibugs_aspectj-1.3'
+    list=[]
+    for match in re.finditer(',', file_path_new):
+        print (match.start(), match.end())
+        list.append(str(match.end()))
+
+    print (str(list[6]))
+
+
+    file_address=file_path_new[int(list[5]): ]
+    file_address_new= file_address.replace(",",".")
+    print (file_address_new)
+    #print (file_address)
+    return file_address_new
+corpus='SWT'
+topdir = 'E:\PhD\LSI\Repo\\'+corpus+'\Source\swt-3.659BLA\\'
 exten = '.java'
-pathToWrite = 'E:\PhD\LSI\Repo\\'+corpus+'\processedSourceCodesibugs_aspectj-1.3'
+pathToWrite = 'E:\PhD\LSI\Repo\\'+corpus+'\\ProcessedSourceCorpusDec19\\'
 
 file_read_write=FileReadWrite(topdir)
 os.path.walk(topdir, traverse_folder, (exten, pathToWrite))

@@ -1,0 +1,1 @@
+copyright xerox corporation palo alto research center incorporated all this common public license contributors xerox ajde module tests test case test suite test suite test suite ajde module tests name test ajde tests test ajde internal tests test ajde ui tests ajde module tests string 

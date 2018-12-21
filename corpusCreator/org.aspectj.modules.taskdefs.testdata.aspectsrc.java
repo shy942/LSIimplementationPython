@@ -1,0 +1,1 @@
+sample aspect sample aspect system join point static part signature declaring type 

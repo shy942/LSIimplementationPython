@@ -1,0 +1,1 @@
+e1 e2 a1 e1 string a2 e2 
