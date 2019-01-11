@@ -40,7 +40,7 @@ def goldset_creator(git_content_list, list_of_source_files, list_no_of_method_di
             #pdb.set_trace()
             file_path=line
             processed_file_path=process_file_path(file_path,'.')
-            found=0
+
             for i in range(0, len(list_of_source_files)):
                 source_path=list_of_source_files[i]+'\n'
                 if(processed_file_path == source_path):
@@ -56,7 +56,7 @@ def goldset_creator(git_content_list, list_of_source_files, list_no_of_method_di
                         #print('-----------------------------------'+No_of_method)
                         #filePathWithMethodInfo=file_address+'.'+No_of_method+'.'+processed_file_path
 
-                        for j in range(1, int(No_of_method)):
+                        for j in range(1, int(No_of_method)+1):
                             filePathWithMethodInfo = file_address + '.' + str(j) + '.' + processed_file_path
                             total_file=total_file+1
                             total_file_path = total_file_path + filePathWithMethodInfo
